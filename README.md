@@ -9,16 +9,16 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## The classes
 
+**All classes are used in the AppComponent**
+
 ### IfPlatformIs Structural Directive
 
-Ionic projects enable us to develop an app that can be run from any platform.  
-There are some usecases in which we only want to render a certain component when on a specific platform.  
-A naive solution might be to use Angulars NgIf in the (parent) components template and detect the platform in the components TypeScript.  
-The problem with this solution is that it bloats your component and causes repatative code.  
+Ionic projects enable us to develop an app that can be run from any platform.
+There are some usecases in which we only want to render a certain component when on a specific platform.
+A naive solution might be to use Angulars NgIf in the (parent) components template and detect the platform in the components TypeScript.
+The problem with this solution is that it bloats your component and causes repatative code.
 
 IfPlatformIs offers an elegant solution to this problem and has an easy to use API with autocomplete.
-
-// code block
 
 ### Http
 
@@ -36,3 +36,11 @@ This will intervene(when the current platform is native app) and use the native 
 ### Pipes
 
 The pipes should be fairly simple to use for anyone who is familiar with Angular.
+
+- MailTo should be used in an href directive and can take in a subject and body (both strings)
+- Base64ToBytes and BytesWithUnits can often be used concurrently to show the size of a base64 encoded file to the user. The BytesWithUnits pipe can take in a maxsize parameter (string)
+
+### Network
+
+The NetworkService can be thrown into any Angular project and only requires to be initialized when the app constructs.
+The developer should only choose how to display a change in the network connection (connection lost/made)
