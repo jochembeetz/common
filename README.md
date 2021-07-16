@@ -1,7 +1,7 @@
 ## Installing
 
-Install the latest version of the Angular CLI.
-Run NPM install
+- Install the latest version of the Angular CLI.
+- Run NPM install
 
 ## Development server
 
